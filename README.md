@@ -1,6 +1,6 @@
 <div align="center">
 
-# 🛡️ RM7-MSG-CMATFN-PY
+# 🛡️ RM7-MSG-PY
 
 ## 📨 Sistema Centro de Mensagem - Assuntos
 
@@ -42,7 +42,7 @@
 
 ## 🎯 Propósito
 
-> O **RM7-MSG-CMATFN-PY** foi desenvolvido para funcionar como um sistema local de consulta e manutenção de assuntos do Centro de Mensagem.
+> O **RM7-MSG-PY** foi desenvolvido para funcionar como um sistema local de consulta e manutenção de assuntos do Centro de Mensagem.
 
 Ele permite que a base de assuntos seja acessada diretamente pelo navegador, usando um servidor Python simples e um arquivo JSON como banco de dados local.
 
@@ -118,12 +118,14 @@ Ele permite que a base de assuntos seja acessada diretamente pelo navegador, usa
 ## 🧱 Estrutura do Projeto
 
 ```text
-RM7-MSG-CMATFN-PY-V2/
+RM7-MSG-PY-V2/
 ├── 🐍 server.py
 ├── 🌐 index.html
 ├── 📘 README.md
 ├── 🪟 iniciar_windows.bat
 ├── 🐧 iniciar_linux.sh
+├── 🖥️ atalho-desktop-linux/
+│   ├── 🖱️ RM7-MSG.desktop
 ├── 📂 data/
 │   └── 🧾 dados.json
 ├── 🎨 static/
@@ -185,6 +187,31 @@ RM7-MSG-CMATFN-PY-V2/
 
 ## 🚀 Como Executar
 
+### ✅ Passo a passo de execução
+
+<table>
+  <tr>
+    <td bgcolor="#E8F3FF"><strong>1️⃣ Abrir a pasta</strong></td>
+    <td>Acesse a pasta principal do sistema: <code>RM7-MSG-PY-V2</code>.</td>
+  </tr>
+  <tr>
+    <td bgcolor="#EFFFF4"><strong>2️⃣ Escolher o inicializador</strong></td>
+    <td>No Windows, use <code>iniciar_windows.bat</code>. No Linux, use <code>iniciar_linux.sh</code> ou o atalho <code>RM7-MSG.desktop</code>.</td>
+  </tr>
+  <tr>
+    <td bgcolor="#FFF8E6"><strong>3️⃣ Iniciar o servidor</strong></td>
+    <td>Ao executar o inicializador, o servidor Python será iniciado na porta <code>8765</code>.</td>
+  </tr>
+  <tr>
+    <td bgcolor="#F3E8FF"><strong>4️⃣ Abrir no navegador</strong></td>
+    <td>Acesse <code>http://127.0.0.1:8765</code>. Em alguns inicializadores, o navegador abre automaticamente.</td>
+  </tr>
+  <tr>
+    <td bgcolor="#FFE8E8"><strong>5️⃣ Encerrar o sistema</strong></td>
+    <td>Para parar o servidor, volte ao terminal aberto e pressione <code>CTRL+C</code>.</td>
+  </tr>
+</table>
+
 ### 🪟 Windows
 
 Use o inicializador:
@@ -222,6 +249,37 @@ python3 server.py
 
 > [!NOTE]
 > No Linux, o inicializador verifica se a porta `8765` já está em uso. Se o sistema já estiver rodando, ele apenas abre o navegador.
+
+### 🖥️ Atalho Desktop Linux
+
+O arquivo abaixo é um atalho de desktop para Linux:
+
+```text
+G:\RM7-MSG-PY-V2\atalho-desktop-linux\RM7-MSG.desktop
+```
+
+Ele permite iniciar o sistema por duplo clique em ambientes gráficos Linux, desde que o arquivo esteja com as permissões corretas e seja marcado como confiável/executável pelo sistema.
+
+Para usar:
+
+1. Copie ou mantenha o arquivo `RM7-MSG.desktop` em um local de acesso, como a Área de Trabalho.
+2. Ajuste os campos `Exec=` e `Path=` dentro do `.desktop`, caso a pasta do sistema esteja em outro caminho no Linux.
+3. Dê permissão de execução:
+
+```bash
+chmod +x atalho-desktop-linux/RM7-MSG.desktop
+chmod +x iniciar_linux.sh
+```
+
+4. No gerenciador de arquivos, clique com o botão direito no atalho e marque como **Permitir execução**, **Confiar neste lançador** ou **Allow Launching**, conforme a distribuição Linux.
+5. Depois disso, abra o sistema com duplo clique no atalho.
+
+<table>
+  <tr>
+    <td bgcolor="#FFF3CD">⚠️ <strong>Observação</strong></td>
+    <td>Algumas distribuições Linux bloqueiam arquivos <code>.desktop</code> baixados ou copiados até que eles sejam marcados manualmente como confiáveis.</td>
+  </tr>
+</table>
 
 ---
 

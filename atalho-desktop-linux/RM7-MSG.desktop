@@ -1,0 +1,11 @@
+[Desktop Entry]
+Version=2.0
+Type=Application
+Name=RM7-MSG
+Comment=Sistema de Consulta de Assuntos
+Exec=/bin/bash -c "cd /home/usuario/Documentos/RM7-MSG-PY-V2 && bash iniciar_linux.sh"
+Path=/home/secom-2/Documentos/RM7-MSG-PY-V2
+Icon=utilities-terminal
+Terminal=true
+StartupNotify=true
+Categories=Office;
