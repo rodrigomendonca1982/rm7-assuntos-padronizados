@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title>RM7-MSG-CMATFN-PY - Versão 2.0.6</title>
+
+  <link rel="stylesheet" href="static/style.css" />
+</head>
+<body>
+  <!-- Barra superior azul-marinho com botão de colapsar/abrir menu, título e perfil. -->
+  <header class="navbar-principal">
+    <button id="btnAbrirMenu" class="botao-menu" type="button" aria-label="Abrir menu">☰</button>
+    <div class="navbar-titulos">
+      <h1>Centro de Mensagem - Assuntos</h1>
+      <p>Sistema local de consulta para endereçamento de mensagem</p>
+    </div>
+    <div class="selo navbar-perfil" id="seloModo">Visitante</div>
+  </header>
+
+  <!-- Camada de escurecimento usada quando o menu está aberto. -->
+  <div id="overlay" class="overlay oculto"></div>
+
+  <!-- Menu lateral iniciado oculto. -->
+  <aside id="menuLateral" class="menu-lateral menu-fechado">
+    <div class="menu-topo">
+      <div>
+        <strong>Menu</strong>
+        <small id="dataAtualMenu">--/--/----</small>
+      </div>
+      <button id="btnFecharMenu" class="botao-fechar" type="button">Colapsar</button>
+    </div>
+
+    <div class="menu-status">
+      <span id="textoModo">Modo visitante</span>
+    </div>
+
+    <div id="areaLogin" class="area-login">
+      <label for="senhaAdmin">Senha administrativa</label>
+      <input id="senhaAdmin" type="password" placeholder="Digite a senha" />
+      <button id="btnEntrar" type="button">Entrar</button>
+      <small>Somente após a senha o menu administrativo será liberado.</small>
+    </div>
+
+    <nav id="menuAdmin" class="menu-admin oculto">
+      <button id="btnNovoRegistro" type="button">Adicionar Registro</button>
+      <button id="btnBackup" type="button">Backup</button>
+      <button id="btnRestaurar" type="button">Restaurar Backup</button>
+      <button id="btnExportar" type="button">Exportar</button>
+      <button id="btnBloquear" type="button" class="botao-alerta">Sair / Bloquear</button>
+    </nav>
+
+    <div class="menu-rodape">
+      <div>VERSAO 2.0.6</div>
+      <hr />
+      <div>1SG FN CN 01069781 RODRIGO DE OLIVEIRA MENDONCA</div>
+    </div>
+  </aside>
+
+  <main class="conteudo">
+    <section class="painel-resumo">
+      <div class="card">
+        <span>Total de registros</span>
+        <strong id="totalRegistros">0</strong>
+      </div>
+      <div class="card">
+        <span>Registros filtrados</span>
+        <strong id="totalFiltrados">0</strong>
+      </div>
+      <div class="card">
+        <span>Total de páginas</span>
+        <strong id="totalPaginas">1</strong>
+      </div>
+    </section>
+
+    <section class="barra-filtros">
+      <div class="grupo-filtros-tabela">
+        <input id="campoPesquisa" type="search" placeholder="Pesquisar por responsável ou assunto..." />
+        <div class="controle-itens-pagina">
+          <label for="itensPorPagina">Itens por página</label>
+          <select id="itensPorPagina">
+            <option value="10">10</option>
+            <option value="25" selected>25</option>
+            <option value="50">50</option>
+            <option value="100">100</option>
+            <option value="999999">Todos</option>
+          </select>
+        </div>
+      </div>
+
+      <button id="btnCadastrarAssuntoTabela" class="botao-cadastrar-assunto oculto" type="button">+ Cadastrar Assunto</button>
+    </section>
+
+    <section class="tabela-container">
+      <table>
+        <thead id="cabecalhoTabela">
+          <tr>
+            <th>RESPONSAVEL</th>
+            <th>Assunto</th>
+          </tr>
+        </thead>
+        <tbody id="corpoTabela">
+          <!-- Registros carregados via JavaScript -->
+        </tbody>
+      </table>
+    </section>
+
+    <section class="paginacao">
+      <button id="btnPaginaAnterior" type="button">Anterior</button>
+      <span id="infoPaginacao">Carregando registros...</span>
+      <button id="btnProximaPagina" type="button">Próxima</button>
+    </section>
+  </main>
+
+  <!-- Modal de cadastro/edição -->
+  <dialog id="modalRegistro">
+    <form method="dialog" class="modal">
+      <h2 id="tituloModalRegistro">Novo Registro</h2>
+
+      <input type="hidden" id="registroId" />
+
+      <label for="responsavel">Responsável</label>
+      <input id="responsavel" type="text" placeholder="Ex.: ASS_PDR, 42, 11, 17" />
+
+      <label for="assunto">Assunto</label>
+      <textarea id="assunto" rows="4" placeholder="Descreva o assunto" required></textarea>
+
+      <div class="modal-acoes">
+        <button id="btnCancelarRegistro" type="button">Cancelar</button>
+        <button id="btnSalvarRegistro" type="button" class="botao-primario">Salvar</button>
+      </div>
+    </form>
+  </dialog>
+
+  <!-- Modal de backup -->
+  <dialog id="modalBackup">
+    <form method="dialog" class="modal">
+      <h2>Gerar Backup</h2>
+      <p>Informe uma observação curta para identificar este backup.</p>
+
+      <label for="observacaoBackup">Observação do backup</label>
+      <input id="observacaoBackup" type="text" maxlength="30" placeholder="Até 30 caracteres" />
+      <small id="contadorObservacaoBackup">0/30 caracteres</small>
+
+      <div class="modal-acoes">
+        <button id="btnCancelarBackup" type="button">Cancelar</button>
+        <button id="btnConfirmarBackup" type="button" class="botao-primario">Gerar Backup</button>
+      </div>
+    </form>
+  </dialog>
+
+  <!-- Modal de restauração -->
+  <dialog id="modalRestaurar">
+    <div class="modal">
+      <h2>Restaurar Backup</h2>
+      <p>Selecione um arquivo de backup para restaurar.</p>
+
+      <div id="listaBackups" class="lista-backups">
+        <!-- Backups carregados via JavaScript -->
+      </div>
+
+      <div class="modal-acoes">
+        <button id="btnFecharRestaurar" type="button">Fechar</button>
+      </div>
+    </div>
+  </dialog>
+
+  <!-- Toast de mensagens -->
+  <div id="toast" class="toast oculto"></div>
+
+  <script src="static/app.js"></script>
+</body>
+</html>

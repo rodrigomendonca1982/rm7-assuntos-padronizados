@@ -1,0 +1,314 @@
+[
+  {
+    "id": 1,
+    "responsavel": "ASS_PDR",
+    "assunto": "DUARTE 01.1.0.1, ESAPNHOL 01.1.0.2, ESPINDOLA 01.1.0.3, GUILHERME 01.1.0.4, GABINETE CMATFN-GABINETE",
+    "padrao": true
+  },
+  {
+    "id": 2,
+    "responsavel": "01.3",
+    "assunto": "OMS",
+    "padrao": false
+  },
+  {
+    "id": 3,
+    "responsavel": "01.3",
+    "assunto": "INTELIGÊNCIA",
+    "padrao": false
+  },
+  {
+    "id": 4,
+    "responsavel": "01.3",
+    "assunto": "PSO",
+    "padrao": false
+  },
+  {
+    "id": 5,
+    "responsavel": "01.3",
+    "assunto": "CURSO DE INTELIGÊNCIA",
+    "padrao": false
+  },
+  {
+    "id": 6,
+    "responsavel": "01.3",
+    "assunto": "CAVSO",
+    "padrao": false
+  },
+  {
+    "id": 7,
+    "responsavel": "01.3",
+    "assunto": "SEGURANÇA ORGÂNICA",
+    "padrao": false
+  },
+  {
+    "id": 8,
+    "responsavel": "01.4",
+    "assunto": "JUSTIÇA E DISCIPLINA-RIC",
+    "padrao": false
+  },
+  {
+    "id": 9,
+    "responsavel": "11",
+    "assunto": "AÇÃO CÍVICA",
+    "padrao": false
+  },
+  {
+    "id": 10,
+    "responsavel": "11",
+    "assunto": "SOBRESSALENTE",
+    "padrao": false
+  },
+  {
+    "id": 11,
+    "responsavel": "11",
+    "assunto": "DRONE",
+    "padrao": false
+  },
+  {
+    "id": 12,
+    "responsavel": "11",
+    "assunto": "INSTRUMENTOS MUSICAIS",
+    "padrao": false
+  },
+  {
+    "id": 13,
+    "responsavel": "11",
+    "assunto": "RAÇÃO CANINA",
+    "padrao": false
+  },
+  {
+    "id": 14,
+    "responsavel": "11",
+    "assunto": "RAÇÃO CANINA + ALTCRED",
+    "padrao": false
+  },
+  {
+    "id": 15,
+    "responsavel": "12",
+    "assunto": "EIBC - EQUIPAGEM OPERATIVA / MATERIAL",
+    "padrao": false
+  },
+  {
+    "id": 16,
+    "responsavel": "14",
+    "assunto": "ARMAMENTO",
+    "padrao": false
+  },
+  {
+    "id": 17,
+    "responsavel": "13",
+    "assunto": "ENGENHARIA",
+    "padrao": false
+  },
+  {
+    "id": 18,
+    "responsavel": "13",
+    "assunto": "EMBARCAÇÕES",
+    "padrao": false
+  },
+  {
+    "id": 19,
+    "responsavel": "13",
+    "assunto": "MINAS",
+    "padrao": false
+  },
+  {
+    "id": 20,
+    "responsavel": "13",
+    "assunto": "NBQR",
+    "padrao": false
+  },
+  {
+    "id": 21,
+    "responsavel": "15",
+    "assunto": "COMANDO E CONTROLE",
+    "padrao": false
+  },
+  {
+    "id": 22,
+    "responsavel": "15",
+    "assunto": "COMUNICAÇÕES",
+    "padrao": false
+  },
+  {
+    "id": 23,
+    "responsavel": "17",
+    "assunto": "GERENTE DE OPERAÇÕES ESPECIAIS SARP E ANTI-SARP - DRONE",
+    "padrao": false
+  },
+  {
+    "id": 24,
+    "responsavel": "18",
+    "assunto": "MISSIL MISTRAL",
+    "padrao": false
+  },
+  {
+    "id": 25,
+    "responsavel": "18",
+    "assunto": "ASTROS",
+    "padrao": false
+  },
+  {
+    "id": 26,
+    "responsavel": "20",
+    "assunto": "CLANF",
+    "padrao": false
+  },
+  {
+    "id": 27,
+    "responsavel": "23",
+    "assunto": "VTR OPERATIVA",
+    "padrao": false
+  },
+  {
+    "id": 28,
+    "responsavel": "30",
+    "assunto": "INTENDÊNCIA",
+    "padrao": false
+  },
+  {
+    "id": 29,
+    "responsavel": "31",
+    "assunto": "COMBOIO DO EXÉRCITO BRASILEIRO",
+    "padrao": false
+  },
+  {
+    "id": 30,
+    "responsavel": "41",
+    "assunto": "CLTI",
+    "padrao": false
+  },
+  {
+    "id": 31,
+    "responsavel": "41",
+    "assunto": "CLTIFN/CPD",
+    "padrao": false
+  },
+  {
+    "id": 32,
+    "responsavel": "41",
+    "assunto": "CIÊNCIA E TECNOLOGIA DA INFORMAÇÃO",
+    "padrao": false
+  },
+  {
+    "id": 33,
+    "responsavel": "42",
+    "assunto": "VTR ADMINISTRATIVA",
+    "padrao": false
+  },
+  {
+    "id": 34,
+    "responsavel": "42",
+    "assunto": "PESSOAL",
+    "padrao": false
+  },
+  {
+    "id": 35,
+    "responsavel": "42",
+    "assunto": "ADMINISTRAÇÃO",
+    "padrao": false
+  },
+  {
+    "id": 36,
+    "responsavel": "42",
+    "assunto": "DESTAQUE",
+    "padrao": false
+  },
+  {
+    "id": 37,
+    "responsavel": "42",
+    "assunto": "CURSO",
+    "padrao": false
+  },
+  {
+    "id": 38,
+    "responsavel": "42",
+    "assunto": "RAÇÃO OPERATIVA",
+    "padrao": false
+  },
+  {
+    "id": 39,
+    "responsavel": "42",
+    "assunto": "MOVIMENTAÇÃO",
+    "padrao": false
+  },
+  {
+    "id": 40,
+    "responsavel": "42",
+    "assunto": "CLG",
+    "padrao": false
+  },
+  {
+    "id": 41,
+    "responsavel": "42",
+    "assunto": "MOVIMENTAÇÃO DE MILITAR/ DESTAQUE",
+    "padrao": false
+  },
+  {
+    "id": 42,
+    "responsavel": "43",
+    "assunto": "SERVIÇO DE ENGENHARIA",
+    "padrao": false
+  },
+  {
+    "id": 43,
+    "responsavel": "50",
+    "assunto": "CICLO DE VIDA",
+    "padrao": false
+  },
+  {
+    "id": 44,
+    "responsavel": "50",
+    "assunto": "CATALOGAÇÃO",
+    "padrao": false
+  },
+  {
+    "id": 45,
+    "responsavel": "50",
+    "assunto": "GTMAM",
+    "padrao": false
+  },
+  {
+    "id": 46,
+    "responsavel": "50",
+    "assunto": "PROGEM",
+    "padrao": false
+  },
+  {
+    "id": 47,
+    "responsavel": "60",
+    "assunto": "SIGEP",
+    "padrao": false
+  },
+  {
+    "id": 48,
+    "responsavel": "60",
+    "assunto": "IA - INTELIGÊNCIA ARTIFICIAL",
+    "padrao": false
+  },
+  {
+    "id": 49,
+    "responsavel": "62.2",
+    "assunto": "PROFESP",
+    "padrao": false
+  },
+  {
+    "id": 50,
+    "responsavel": "70",
+    "assunto": "CIÊNCIA E TECNOLOGIA",
+    "padrao": false
+  },
+  {
+    "id": 51,
+    "responsavel": "70",
+    "assunto": "INOVAÇÃO",
+    "padrao": false
+  },
+  {
+    "id": 52,
+    "responsavel": "42",
+    "assunto": "IAM",
+    "padrao": false
+  }
+]
